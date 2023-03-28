@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "313168571523",
+    "project_id": "catalog-b041e",
+    "storage_bucket": "catalog-b041e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:313168571523:android:5a9fdd34d55d5f8ce47fb6",
+        "android_client_info": {
+          "package_name": "ru.konditer.catalog"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "313168571523-k3inofrqjqdcgbnnpqq7226nnc2m5j9i.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "ru.konditer.catalog",
+            "certificate_hash": "a9d59e2279534e5c4571d38c2d2c0f4114a986a6"
+          }
+        },
+        {
+          "client_id": "313168571523-3fmjm7lipogm4h92mb9em4idb1f2gbbb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDjC8VilpaByca2CISPJLbLhC5v0yaD4Q4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "313168571523-3fmjm7lipogm4h92mb9em4idb1f2gbbb.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

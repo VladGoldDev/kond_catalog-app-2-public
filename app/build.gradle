@@ -1,0 +1,137 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+apply plugin: 'com.google.firebase.crashlytics'
+apply plugin: 'com.google.gms.google-services'
+
+android {
+    compileSdkVersion 28
+
+    defaultConfig {
+//        applicationId "ru.konditer_class.catalog2"
+        applicationId "ru.konditer.catalog"
+        minSdkVersion 21
+        targetSdkVersion 28
+        versionCode 7
+        versionName "1.0.1"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+    }
+
+    signingConfigs {
+        debug {
+            storeFile file('D:\\work\\kond_catalog-app-2-public\\app\\keys\\keystore.jks')
+            storePassword '123456'
+            keyAlias = 'catalog'
+            keyPassword '123456'
+        }
+        release {
+            storeFile file('D:\\work\\kond_catalog-app-2-public\\app\\keys\\keystore.jks')
+            storePassword '123456'
+            keyAlias = 'catalog'
+            keyPassword '123456'
+        }
+    }
+
+    buildTypes {
+        release {
+            debuggable = true
+            minifyEnabled false
+            shrinkResources false
+            signingConfig signingConfigs.release
+        }
+        debug {
+            debuggable = true
+            signingConfig signingConfigs.debug
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = "1.8"
+    }
+}
+
+androidExtensions {
+    experimental = true
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation project(':gallery')
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.1.0'
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    implementation "com.android.support:appcompat-v7:$support_lib_version"
+    implementation "com.android.support:recyclerview-v7:$support_lib_version"
+    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
+    implementation 'com.android.support:support-v4:28.0.0'
+    implementation 'com.android.support:design:28.0.0'
+    implementation 'com.google.firebase:firebase-crashlytics:17.2.1'
+    implementation 'com.google.firebase:firebase-analytics:17.5.0'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+
+    implementation "com.squareup.retrofit2:retrofit:$retrofit_version"
+    implementation "com.squareup.retrofit2:adapter-rxjava2:$retrofit_version"
+    implementation "com.squareup.retrofit2:converter-moshi:$retrofit_version"
+    implementation "com.squareup.retrofit2:converter-gson:$retrofit_version"
+    implementation "com.squareup.okhttp3:logging-interceptor:3.14.1"
+    implementation 'com.google.code.gson:gson:2.8.5'
+
+    implementation 'io.reactivex.rxjava2:rxkotlin:2.4.0'
+    implementation 'io.reactivex.rxjava2:rxandroid:2.1.1'
+
+    implementation "android.arch.persistence.room:runtime:$room_version"
+    kapt "android.arch.persistence.room:compiler:$room_version"
+    implementation "android.arch.persistence.room:rxjava2:$room_version"
+
+    implementation "com.github.bumptech.glide:glide:$glide_version"
+    kapt "com.github.bumptech.glide:compiler:$glide_version"
+
+    implementation "org.koin:koin-android:$koin_version"
+    implementation "org.koin:koin-android-scope:$koin_version"
+    implementation "org.koin:koin-android-viewmodel:$koin_version"
+
+    implementation 'com.github.rubensousa:bottomsheetbuilder:1.6.1'
+
+    implementation "com.arello-mobile:moxy-app-compat:$moxy_version"
+    kapt "com.arello-mobile:moxy-compiler:$moxy_version"
+
+
+    implementation 'com.github.travijuu:numberpicker:1.0.7'
+
+    implementation "com.evernote:android-state:$android_state_version"
+    kapt "com.evernote:android-state-processor:$android_state_version"
+
+    implementation 'com.jakewharton.threetenabp:threetenabp:1.4.2'
+    implementation "com.jakewharton.timber:timber:4.0.0"
+//plugins {
+//    id 'com.android.application'
+//    id 'koin-android'
+//    id 'kotlin-android-extensions'
+//}
+
+    // crashlytics + analytics
+//    implementation platform('com.google.firebase:firebase-bom:18.0.0')
+//    implementation 'com.google.firebase:firebase-crashlytics'
+//    implementation 'com.google.firebase:firebase-analytics'
+//    implementation 'com.google.firebase:firebase-messaging'
+//    implementation 'com.google.firebase:firebase-database:20.1.0'
+
+//    implementation 'com.google.firebase:firebase-analytics-ktx:21.2.0'
+//    implementation 'com.google.firebase:firebase-database-ktx:20.1.0'
+
+
+    //#Firebase
+//    implementation platform('com.google.firebase:firebase-bom:31.1.0')
+//    implementation 'com.google.firebase:firebase-crashlytics'
+//    implementation 'com.google.firebase:firebase-analytics'
+//    implementation 'com.google.firebase:firebase-messaging'
+
+}
+

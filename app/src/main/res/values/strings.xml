@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">CatalogBuyer</string>
+    <string name="title_activity_nav_drawer">CatalogBuyer</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="show_prices">Показывать цены</string>
+    <string name="row_items_count">Изменить количество в ряд</string>
+    <string name="with_0_ost">С нулевыми остатками</string>
+    <string name="current_order">Корзина</string>
+    <string name="past_orders">Прошлые заказы</string>
+    <string name="update_data">Обновить данные</string>
+    <string name="menu_upload_rest_of_the_photos">Загрузить новые фото</string>
+    <string name="logout">Выйти</string>
+    <string name="kol_foto_in_row">Товаров в категории</string>
+    <string name="hidden_tovs">Скрытые</string>
+    <string name="title_activity_login">Войти</string>
+    <!-- Strings related to login -->
+    <string name="prompt_code">Логин</string>
+    <string name="order_comment_hint">Ваш комментарий к заказу</string>
+    <string name="prompt_key">Ключ из telegram</string>
+    <string name="prompt_password">Пароль</string>
+    <string name="action_sign_in">Войти</string>
+    <string name="action_request_key">Запросить ключ</string>
+    <string name="action_sign_in_short">Войти</string>
+    <string name="kol_foto_screen_title">Количество товаров по категориям</string>
+</resources>

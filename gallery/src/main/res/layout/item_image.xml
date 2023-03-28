@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                             android:layout_width="match_parent"
+                                             android:layout_height="match_parent"
+                                             xmlns:tools="http://schemas.android.com/tools"
+                                             android:clipChildren="false"
+                                             xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.chrisbanes.photoview.PhotoView android:layout_width="match_parent" android:layout_height="wrap_content"
+                                        android:id="@+id/photoView"
+                                        app:layout_constraintTop_toTopOf="parent"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+    />
+
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+              app:layout_constrainedWidth="true"
+              android:id="@+id/tvCode"
+              tools:text="Код"
+              android:textColor="@android:color/black"
+              app:layout_constraintTop_toTopOf="@id/photoView"
+              app:layout_constraintStart_toStartOf="parent"
+              app:layout_constraintEnd_toEndOf="parent"
+              android:layout_margin="5dp"
+    />
+
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+              app:layout_constrainedWidth="true"
+              android:id="@+id/tvName"
+              tools:text="Название"
+              android:textColor="@android:color/black"
+              app:layout_constraintTop_toBottomOf="@id/tvCode"
+              app:layout_constraintStart_toStartOf="parent"
+              app:layout_constraintEnd_toEndOf="parent"
+              android:layout_margin="5dp"
+    />
+
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+              android:id="@+id/tvPrice"
+              tools:text="57,91 ₽"
+              android:textColor="@android:color/black"
+              app:layout_constraintBottom_toBottomOf="@id/photoView"
+              app:layout_constraintStart_toStartOf="parent"
+              android:layout_margin="5dp"
+    />
+
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+              android:id="@+id/tvOst"
+              tools:text="Ост.: 272"
+              android:textColor="@android:color/black"
+              app:layout_constraintBottom_toBottomOf="@id/photoView"
+              app:layout_constraintEnd_toEndOf="parent"
+              android:layout_margin="5dp"
+    />
+
+</android.support.constraint.ConstraintLayout>

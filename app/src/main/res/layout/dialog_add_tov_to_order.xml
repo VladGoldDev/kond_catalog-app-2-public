@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/rootDialog"
+        android:padding="10dp">
+
+    <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:textColor="@android:color/black"
+            android:text="Добавить товар в заказ"
+            />
+
+    <TextView
+            android:id="@+id/tvOst"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvTitle"
+            android:textColor="@android:color/black"
+            />
+
+    <TextView
+            android:id="@+id/tvCurrentlyInCartTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvOst"
+            android:textColor="@android:color/black"
+            android:text="Сейчас в корзине:"
+            />
+
+    <TextView
+            android:id="@+id/tvSht"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvCurrentlyInCartTitle"
+            android:layout_marginTop="15dp"
+            android:textColor="@android:color/black"
+            android:text="Штуки"
+            />
+
+    <com.travijuu.numberpicker.library.NumberPicker
+            android:id="@+id/numberPickerSht"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/barrier"
+            app:layout_constraintTop_toTopOf="@id/tvSht"
+            app:layout_constraintBottom_toBottomOf="@id/tvSht"
+            app:min="0"
+            app:value="0"
+            />
+
+    <android.support.constraint.Group
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/groupSht"
+            android:visibility="gone"
+            app:constraint_referenced_ids="numberPickerSht,tvSht"
+            />
+
+    <TextView
+            android:id="@+id/tvBlok"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/numberPickerSht"
+            android:layout_marginTop="15dp"
+            app:layout_goneMarginTop="15dp"
+            android:textColor="@android:color/black"
+            android:text="Блоки"
+            />
+
+    <com.travijuu.numberpicker.library.NumberPicker
+            android:id="@+id/numberPickerBlok"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/barrier"
+            app:layout_constraintTop_toTopOf="@id/tvBlok"
+            app:layout_constraintBottom_toBottomOf="@id/tvBlok"
+            app:min="0"
+            app:value="0"
+            />
+
+    <android.support.constraint.Group
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/groupBlok"
+            android:visibility="gone"
+            app:constraint_referenced_ids="numberPickerBlok,tvBlok"
+            />
+
+    <TextView
+            android:id="@+id/tvUpak"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/numberPickerBlok"
+            android:layout_marginTop="15dp"
+            app:layout_goneMarginTop="15dp"
+            android:textColor="@android:color/black"
+            android:text="Упаковки"
+            />
+
+    <com.travijuu.numberpicker.library.NumberPicker
+            android:id="@+id/numberPickerUpak"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/barrier"
+            app:layout_constraintTop_toTopOf="@id/tvUpak"
+            app:layout_constraintBottom_toBottomOf="@id/tvUpak"
+            app:min="0"
+            app:value="0"
+            />
+
+    <android.support.constraint.Group
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/groupUpak"
+            android:visibility="gone"
+            app:constraint_referenced_ids="numberPickerUpak,tvUpak"
+            />
+
+    <android.support.constraint.Barrier
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/barrier"
+            app:barrierDirection="end"
+            app:constraint_referenced_ids="tvSht,tvBlok,tvUpak"
+            />
+
+</android.support.constraint.ConstraintLayout>
